@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEFAULT 0
+#define DEF 0
 #define LWR 1
 #define RSE 2
 #define ALT 3
@@ -23,7 +23,7 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                def {
                 bindings = <
    &none &kp Q        &kp W       &kp E         &kp R         &kp T           &kp Y     &kp U       &kp I       &kp O       &kp P           &none
    &none &mt LSHFT A  &mt LCTRL S &mt LALT D    &mt LGUI F    &kp G           &kp H     &mt RGUI J  &mt RALT K  &mt RCTRL L &mt RSHFT SEMI  &none
@@ -31,7 +31,7 @@
                             &mt LWR CAPS  &kp ESC       &kp RET         &kp SPACE &kp BSPC    &mt RSE TAB
                         >;
                 };
-                lower {
+                lwr {
                 bindings = <
    &none  &kp N1 &kp N2  &kp N3  &kp N4  &kp N5        &kp N6    &kp N7    &kp N8      &kp N9    &kp N0 &none
    &none  &trans &trans  &trans  &trans  &trans        &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT &trans &none
@@ -40,7 +40,7 @@
                         >;
                 };
 
-                raise {
+                rse {
                 bindings = <
    &none  &kp EXCL   &kp AT    &kp HASH      &kp DLLR  &kp PRCNT       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR &none
    &none  &kp GRAVE  &kp BSLH  &kp LBRC      &kp RBRC  &kp QMARK       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp SQT  &none
@@ -48,7 +48,7 @@
                         &mt ALT CAPS  &kp ESC   &kp RET         &kp SPACE &kp BSPC  &none
                         >;
                 };
-                alter {
+                alt {
                 bindings = <
     &none &kp F1        &kp F2        &kp F3        &kp F4        &kp F5              &kp F6      &kp F7    &kp F8      &kp F9  &kp F10 &none
     &none &kp C_BRI_DN  &kp C_BRI_UP  &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP        &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans  &trans  &none
