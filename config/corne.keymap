@@ -8,8 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define CAPSLOCK (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_CAPS_LOCK))
-#define CAPS (CAPSLOCK)
 
 &mt {
   tapping-term-ms = <200>;
@@ -18,15 +16,6 @@
 };
 
 / {
-        behaviors{
-          caps: capslock {
-            compatible = "zmk,behavior-hold-tap";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&caps_word>, <&mo>;
-          };
-        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -35,7 +24,7 @@
    &none &kp Q        &kp W       &kp E         &kp R         &kp T           &kp Y     &kp U       &kp I       &kp O       &kp P           &none
    &none &mt LSHFT A  &mt LCTRL S &mt LALT D    &mt LGUI F    &kp G           &kp H     &mt RGUI J  &mt RALT K  &mt RCTRL L &mt RSHFT SEMI  &none
    &none &kp Z        &kp X       &kp C         &kp V         &kp B           &kp N     &kp M       &kp COMMA   &kp DOT     &kp FSLH        &none
-                            &caps 0 1  &kp ESC       &kp RET         &kp SPACE &kp BSPC    &lt 2 TAB
+                            &mt 1 &caps_word  &kp ESC       &kp RET         &kp SPACE &kp BSPC    &lt 2 TAB
                         >;
                 };
                 1 {
