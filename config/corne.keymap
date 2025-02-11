@@ -16,14 +16,17 @@
 };
 
 / {
-        combos{
-          compatible = "zmk,combos";
-          combo_caps {
-              timeout-ms = <50>;
-              key-positions = <11 17>;
-              bindings = <&kp CAPS>;
-          };
-        };
+    combos {
+      compatible = "zmk,combos";
+      combo_caps {
+        timeout-ms = <50>;
+        key-positions = <31 34>;
+        bindings = <&kp CAPS>;
+      };
+    };
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
@@ -32,7 +35,7 @@
    &none &kp Q        &kp W       &kp E         &kp R         &kp T           &kp Y     &kp U       &kp I       &kp O       &kp P           &none
    &none &mt LSHFT A  &mt LCTRL S &mt LALT D    &mt LGUI F    &kp G           &kp H     &mt RGUI J  &mt RALT K  &mt RCTRL L &mt RSHFT SEMI  &none
    &none &kp Z        &kp X       &kp C         &kp V         &kp B           &kp N     &kp M       &kp COMMA   &kp DOT     &kp FSLH        &none
-                            &mt 1 &kp ESC       &kp RET         &kp SPACE &kp BSPC    &lt 2 TAB
+                            &mo 1 &kp ESC       &kp RET         &kp SPACE &kp BSPC    &lt 2 TAB
                         >;
                 };
                 1 {
@@ -49,7 +52,7 @@
    &none  &kp EXCL   &kp AT    &kp HASH      &kp DLLR  &kp PRCNT       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR &none
    &none  &kp GRAVE  &kp BSLH  &kp LBRC      &kp RBRC  &kp QMARK       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp SQT  &none
    &none  &kp TILDE  &kp PIPE  &trans        &trans    &trans          &kp UNDER &kp PLUS  &kp LT    &kp GT    &kp DQT  &none
-                        &lt 3 CAPS  &kp ESC   &kp RET         &kp SPACE &kp BSPC  &none
+                        &mo 3  &kp ESC   &kp RET         &kp SPACE &kp BSPC  &none
                         >;
                 };
                 3 {
