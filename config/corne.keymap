@@ -18,6 +18,15 @@
 };
 
 / {
+        behaviors{
+          caps: capslock {
+            compatible = "zmk,behavior-hold-tap";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&caps_word>, <&mo>;
+          };
+        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -26,7 +35,7 @@
    &none &kp Q        &kp W       &kp E         &kp R         &kp T           &kp Y     &kp U       &kp I       &kp O       &kp P           &none
    &none &mt LSHFT A  &mt LCTRL S &mt LALT D    &mt LGUI F    &kp G           &kp H     &mt RGUI J  &mt RALT K  &mt RCTRL L &mt RSHFT SEMI  &none
    &none &kp Z        &kp X       &kp C         &kp V         &kp B           &kp N     &kp M       &kp COMMA   &kp DOT     &kp FSLH        &none
-                            &lt 1 CAPS  &kp ESC       &kp RET         &kp SPACE &kp BSPC    &lt 2 TAB
+                            &caps 0 1  &kp ESC       &kp RET         &kp SPACE &kp BSPC    &lt 2 TAB
                         >;
                 };
                 1 {
