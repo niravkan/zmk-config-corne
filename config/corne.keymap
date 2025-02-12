@@ -20,8 +20,8 @@
       compatible = "zmk,combos";
       combo_caps {
         timeout-ms = <75>;
-        key-positions = <38 41>;
-        bindings = <&kp CAPS>;
+        key-positions = <1 2>;
+        bindings = <&caps_word>;
       };
     };
 };
